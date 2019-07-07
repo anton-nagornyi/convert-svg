@@ -270,7 +270,10 @@ html { background-color: ${provider.getBackgroundColor(options)}; }
 
   async [_getPage](html) {
     if (!this[_browser]) {
-      this[_browser] = await puppeteer.launch(this[_options].puppeteer);
+      const opts = this[_options].puppeteer || {};
+      opts.executablePath = process.env.CHROME_BIN || null;
+      opts.args = ['--no-sandbox', '--headless', '--disable-gpu'];
+      this[_browser] = await puppeteer.launch(opts);
       this[_page] = await this[_browser].newPage();
     }
 

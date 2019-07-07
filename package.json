@@ -1,5 +1,6 @@
 {
   "name": "convert-svg",
+  "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.9.0",

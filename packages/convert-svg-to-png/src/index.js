@@ -22,7 +22,7 @@
 
 'use strict';
 
-const { API } = require('convert-svg-core');
+const { API } = require('convert-svg/packages/convert-svg-core');
 
 const PNGProvider = require('./PNGProvider');
 

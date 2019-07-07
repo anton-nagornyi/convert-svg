@@ -22,7 +22,7 @@
 
 'use strict';
 
-const { Provider } = require('convert-svg-core');
+const { Provider } = require('convert-svg/packages/convert-svg-core');
 
 const { version } = require('../package.json');
 
